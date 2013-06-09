@@ -9,7 +9,7 @@
 
 /******************************************************
  ** For the sake of compatibility to Android 2.2,
- ** we use 'dlopen' instead of libandroid.so from ndk.
+ ** I used 'dlopen' instead of libandroid.so from ndk.
  ******************************************************/
 #define LIBANDROID  "libandroid.so"
 
@@ -30,6 +30,13 @@ type_AAsset_close           AAsset_close;
 
 extern "C"
 {
+    /******************************************************
+     ** !!!!!!!!!!!!!!!!!!!Important!!!!!!!!!!!!!!!!!!!!!**
+     ** In order to get native AssetManager, a native call 
+     ** named "nativeSetAssetManager(AssetManager assMan)"
+     ** from java class com.mustime.lib.NativeHelper is a 
+     ** must.
+     ******************************************************/
     JNIEXPORT void JNICALL
     Java_com_mustime_lib_NativeHelper_nativeSetAssetManager(JNIEnv* env,
                                                             jobject thiz,
