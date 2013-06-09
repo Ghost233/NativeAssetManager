@@ -26,7 +26,7 @@ public:
      *  @param 	pszFileName The path of the file, it could be a relative or absolute path.
      *  @return true if the file exists, otherwise it will return false.
      */
-	bool isFileExist(const char* pszFileName);
+    bool isFileExist(const char* pszFileName);
 
     /**
      *  Gets file data by filename
@@ -37,7 +37,7 @@ public:
      *  @return Upon success, a pointer to the data is returned, otherwise NULL.
      *  @warning Recall: you are responsible for calling delete[] on any Non-NULL pointer returned.
      */
-	unsigned char* getFileData(const char* pszFileName, const char* pszMode, unsigned long * pSize);
+    unsigned char* getFileData(const char* pszFileName, const char* pszMode, unsigned long * pSize);
 
 
 protected:
@@ -47,7 +47,7 @@ protected:
      *  @param 	pszFileName The path of the file relatived to "assets/".
      *  @return Upon success, a pointer to the AAsset is returned, otherwise NULL.
      */
-	AAsset* openAssetFile(const char* pszFileName);
+    AAsset* openAssetFile(const char* pszFileName);
 		
     /**
      *  Checks whether a file path is relative or absolute.
