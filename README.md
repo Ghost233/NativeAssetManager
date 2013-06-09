@@ -1,0 +1,4 @@
+NativeAssetManager
+==================
+
+Android native AssetManager
