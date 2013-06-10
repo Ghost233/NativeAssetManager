@@ -16,8 +16,8 @@ public class NativeHelper {
 	}
 	
 	public static void initNative() {
-		Cocos2dxHelper.sAssetManager = mContext.getAssets();
-		Cocos2dxHelper.nativeSetAssetManager(sAssetManager);
+		NativeHelper.sAssetManager = mContext.getAssets();
+		NativeHelper.nativeSetAssetManager(sAssetManager);
 	}
 	
 	private static native void nativeSetAssetManager(AssetManager assetManager);
