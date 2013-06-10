@@ -8,15 +8,10 @@ import android.content.Context;
 import android.content.res.AssetManager;
 
 public class NativeHelper {
-	private Context mContext;
 	private static AssetManager sAssetManager;
-
-	NativeHelper(Context context) {
-		mContext = context;
-	}
 	
-	public static void initNative() {
-		NativeHelper.sAssetManager = mContext.getAssets();
+	public static void initNative(Context context) {
+		NativeHelper.sAssetManager = context.getAssets();
 		NativeHelper.nativeSetAssetManager(sAssetManager);
 	}
 	
